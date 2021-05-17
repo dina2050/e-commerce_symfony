@@ -1,12 +1,13 @@
 doctrine:
     dbal:
         url: '%env(resolve:DATABASE_URL)%'
-        driver: pdo_mysql
+        driver: 'pdo_mysql'
+        server_version: '5.7'
         host:  127.0.0.1
         port: 3307
-        dbname: symfony08
-        user: root
-        password: dina
+        dbname: 'symfony08'
+        user: "%env(resolve:DB_USERNAME)%"
+        password: "%env(resolve:DB_PASSWORD)%"
         # IMPORTANT: You MUST configure your server version,
         # either here or in the DATABASE_URL env var (see .env file)
         #server_version: '13'
