@@ -40,9 +40,11 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
                 </li>
-
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ path('product') }}">Nos produits <span class="sr-only">(current)</span></a>
+                </li>
             </ul>
         {% if app.user %}
             <a href="{{ path('account') }}">Mon compte</a>  <a href="{{ path('app_logout') }}">Deconnexion</a>
