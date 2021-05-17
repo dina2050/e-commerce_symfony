@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier le mot de passe{% endblock %}
+
+{% block content %}
+    <h1>Modifier le mot de passe</h1>
+    {% if warning %}
+        <div class="alert alert-info">{{ warning }}</div>
+    {% endif %}
+    {{ form(form) }}
+    <a href="{{ path('account') }}">Retourner a mon compte</a>
+{% endblock %}
