@@ -1,0 +1,18 @@
+
+
+.footerStyle {
+    background-color:#707070;
+}
+
+.navbar-nav a, a:hover, a:visited, a:active {
+    color: white;
+    text-decoration: none;
+}
+.card-body{
+    background-color: #839187;
+}
+
+.black{
+    color: black;
+}
+

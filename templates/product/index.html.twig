@@ -1,21 +1,24 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProductController!{% endblock %}
+{% block title %}Boutique{% endblock %}
 
 {% block content %}
     <h1> Decouvrez nos produits</h1>
 <div class="row mt-5">
     {% for product in products %}
     <div class="col-md-4">
+        <a href="{{ path('oneproduct', {'slug':product.slug}) }}">
         <div class="card" style="width: 18rem;">
             <img class="card-img-top img-fluid" src="/uploads/{{ product.image }}" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">{{ product.name }}</h5>
-                <p class="card-text">{{ product.title }}</p>
-                <span class="mr-5">{{ product.price/100 }} €</span>
-                <a href="{{ path('oneproduct', {'slug':product.slug}) }}" class="btn btn-primary">Savoir plus</a>
+                <div class="d-flex justify-content-between">
+                    <p class="card-text">{{ product.title }}</p>
+                    <span class="mr-5">{{ product.price/100 }} €</span>
+                </div>
             </div>
         </div>
+        </a>
     </div>
     {% endfor %}
 </div>
