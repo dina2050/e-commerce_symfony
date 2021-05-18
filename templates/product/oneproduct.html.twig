@@ -1,7 +1,7 @@
 
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProductController!{% endblock %}
+{% block title %}Boutique{% endblock %}
 
 {% block content %}
     <h1> {{ product.name }}</h1>
@@ -9,8 +9,8 @@
             <div class="col-md-6">
                     <img src="/uploads/{{ product.image }}" alt="{{ product.image }}">
                 <div class="d-flex">
-                    <p  class="ml-5">{{ product.title }}</p>
-                    <p class="ml-5">{{ product.price/100 }} €</p>
+                    <p>{{ product.title }}</p>
+                    <p class="ml-5">{{ product.price/100 }}€</p>
                 </div>
             </div>
         <div class="col-md-6 addToCard">

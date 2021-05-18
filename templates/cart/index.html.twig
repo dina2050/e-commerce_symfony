@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CartController!{% endblock %}
+{% block title %}Boutique{% endblock %}
 
 {% block content %}
 
@@ -20,6 +20,7 @@
         <tbody>
         {% set total=null %}
         {% for product in cart %}
+        {% if product.product %}
      <tr>
          <th>{{ product.product.name}}</th>
          <td> <img src="/uploads/{{ product.product.image}}" alt="{{ product.product.name}}" height="70px"></td>
@@ -37,14 +38,15 @@
             </td>
         </tr>
             {% set total=total+(product.product.price * product.quantity)/100 %}
+        {% endif %}
         {% endfor %}
         </tbody>
     </table>
             <div class="row">
                 <div class="col-12">
                     <div class="float-right">
-                        <div>Nombre de produits:{{ cart|length }}</div>
-                        <div>Total:{{ total }} €</div>
+                        <div class="mb-3"><b>Nombre de produits:</b> {{ cart|length }}</div>
+                        <div class="mb-3"><b>Total:</b> {{ total }} €</div>
                         <button  class="btn btn-secondary btn-lg">Valider</button>
                     </div>
                 </div>
